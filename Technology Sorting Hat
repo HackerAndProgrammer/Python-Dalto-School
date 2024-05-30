@@ -1,0 +1,53 @@
+import random 
+
+#Technology areas (best is, of course, Artificial Intelligence(Machine Learning))
+AI = 0
+WebDevelopment = 0
+Hacking = 0
+DataScience = 0
+
+#Questions
+question_1 = int(input("Question 1: \nDo you like AI or DataScience? \n1)Artificial Inteligence \n2)DataScience \n Enter answer (1-2):  "))
+
+question_2 = int(input("Question 2: \nI feel better in: \ \n1) Design \n2) Meta-Technology development \n3) Exploits development \n4) Building a Database \nEnter answer (1-4): "))
+
+question_3 = int(input("Question 3: \nAs programming languages, I like: \ \n1)Python \n2)SQL \n3)HTML and CSS \n4)I use commands, i don't care for a specific language. \nEnter and answer: "))
+
+if question_1 == 1:
+    AI += 1
+elif question_1 == 2:
+    DataScience += 1
+else:
+    print("Wrong input")
+
+if question_2 == 1:
+    WebDevelopment += 1
+elif question_2 == 2:
+    AI += 1
+elif question_2 == 3:
+    Hacking += 1
+elif question_2 == 4:
+    DataScience += 1
+else:
+    print("Wrong input")
+
+if question_3 == 1:
+    AI += 1
+elif question_3 == 2:
+    DataScience += 1
+elif question_3 == 3:
+    WebDevelopment += 1
+elif question_3 == 4:
+    Hacking += 1
+else:
+    print("Wrong input")
+
+#Calculating the winner
+if AI > DataScience and AI > Hacking and AI > WebDevelopment:
+    print("AI, that's the career for you.")
+elif DataScience > AI and DataScience > Hacking and DataScience > WebDevelopment:
+    print("DataScience, go for that.!")
+elif Hacking > AI and Hacking > DataScience and Hacking > WebDevelopment:
+    print("You need to start learning Cyber-Security right now!")
+else:
+    print("Your path is Web Development") 
